@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Goals - Detox Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>Detox Coach</h2>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="set-goals.html" class="active">Set Goals</a>
+        <a href="progress.html">Progress</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header>
+        <h1>Set Your Detox Goals</h1>
+        <button id="theme-toggle" class="btn">🌙 Dark Mode</button>
+      </header>
+
+      <section id="goals" class="section">
+        <h2>Create New Goals</h2>
+        <input type="text" id="goal-input" placeholder="Enter your goal..." />
+        <button id="add-goal-btn" class="btn primary">Add Goal</button>
+        <ul id="goal-list"></ul>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

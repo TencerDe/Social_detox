@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Detox Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>Detox Coach</h2>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="set-goals.html">Set Goals</a>
+        <a href="progress.html">Progress</a>
+        <a href="settings.html" class="active">Settings</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header>
+        <h1>Settings</h1>
+        <button id="theme-toggle" class="btn">🌙 Dark Mode</button>
+      </header>
+
+      <section id="settings" class="section">
+        <h2>Customize Your Experience</h2>
+        <div class="settings-grid">
+          <label>
+            Notifications
+            <input type="checkbox" id="notifications-toggle" />
+          </label>
+          <label>
+            Daily Reminder Time
+            <input type="time" id="reminder-time" />
+          </label>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

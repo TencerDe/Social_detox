@@ -1,0 +1,243 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Root variables */
+  :root {
+    --primary-color: #00BFAE;
+    --secondary-color: #FF4081;
+    --background-color: #F8F9FC;
+    --sidebar-bg: #1A1A2E;
+    --text-color: #333;
+    --text-light: #8B8B8B;
+    --button-hover: #00A78E;
+    --card-bg: white;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Body */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* App layout */
+  #app {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background-color: var(--sidebar-bg);
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar h2.logo {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .sidebar nav a:hover, .sidebar nav a.active {
+    background-color: var(--primary-color);
+    transform: translateX(10px);
+  }
+  
+  .sidebar nav a.active {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Main content */
+  .main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  header .btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  header .btn:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+  }
+  
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  #timer-display {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .card .btn {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-weight: 500;
+  }
+  
+  input[type="text"], input[type="time"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="time"]:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  ul li {
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+  }
+  
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 50px;
+  }
+  
+  .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  input:checked + .slider {
+    background-color: #00BFAE;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  

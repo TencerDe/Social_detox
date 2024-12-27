@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress - Detox Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>Detox Coach</h2>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="set-goals.html">Set Goals</a>
+        <a href="progress.html" class="active">Progress</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header>
+        <h1>Your Detox Progress</h1>
+        <button id="theme-toggle" class="btn">🌙 Dark Mode</button>
+      </header>
+
+      <section id="progress" class="section">
+        <h2>Progress Over Time</h2>
+        <canvas id="progress-chart"></canvas>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
